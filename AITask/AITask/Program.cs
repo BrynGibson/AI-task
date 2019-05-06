@@ -15,12 +15,12 @@ namespace AITask
             do
             {
 
-                Console.WriteLine("Cool menu:");
+                Console.WriteLine("What set of questions would you like me to ask you?");
                 Console.WriteLine();
-                Console.WriteLine("1  -  Task 1");
-                Console.WriteLine("2  -  Task 2");
-                Console.WriteLine("3  -  Task 3");
-                Console.WriteLine("4  -  Task 4");
+                Console.WriteLine("1  -  General Questions");
+                Console.WriteLine("2  -  Course Related");
+                Console.WriteLine("3  -  Health/Wellbeing");
+                Console.WriteLine("4  -  Future Plans");
                 Console.WriteLine("0  -  Exit menu system");
                 Console.WriteLine();
                 Console.Write("Input selection: ");
@@ -30,25 +30,25 @@ namespace AITask
                 switch (userInput)
                 {
                     case "1":
-                        Task1();
+                        GeneralQuestions();
                         Console.WriteLine("Press enter to return to the menu.");
                         Console.ReadLine();
                         Console.Clear();
                         break;
                     case "2":
-                        Task2();
+                        CourseRelated();
                         Console.WriteLine("Press enter to return to the menu.");
                         Console.ReadLine();
                         Console.Clear();
                         break;
                     case "3":
-                        Task3();
+                        HealthWellBeing();
                         Console.WriteLine("Press enter to return to the menu.");
                         Console.ReadLine();
                         Console.Clear();
                         break;
                     case "4":
-                        Task4();
+                        FuturePlans();
                         Console.WriteLine("Press enter to return to the menu.");
                         Console.ReadLine();
                         Console.Clear();
@@ -72,25 +72,25 @@ namespace AITask
             Console.ReadLine();
         }
 
-        static void Task1()
+        static void GeneralQuestions()
         {
             Console.WriteLine("This is Task 1");
             Console.WriteLine();
         }
 
-        static void Task2()
+        static void CourseRelated()
         {
             Console.WriteLine("This is Task 2");
             Console.WriteLine();
         }
 
-        static void Task3()
+        static void HealthWellBeing()
         {
             Console.WriteLine("This is Task 3");
             Console.WriteLine();
         }
 
-        static void Task4()
+        static void FuturePlans()
         {
             Console.WriteLine("This is Task 4");
             Console.WriteLine();
