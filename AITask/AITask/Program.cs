@@ -74,11 +74,56 @@ namespace AITask
             Console.ReadLine();
         }
 
+        private static string temp;
+        private static char name, course, IT, living, home, flat;
+        private static int age;
         static void GeneralQuestions()
         {
             //////////////// SAMS DONT TOUCH //////////////////
-            Console.WriteLine("This is Task 1");
+            Console.WriteLine("Hello, I am the AI IT teacher, i want to ask you a few questions so i can get to know you.");
             Console.WriteLine();
+            Console.WriteLine("what is your name?");
+            name = Console.ReadLine();
+
+            Console.WriteLine("Hello "+name+", nice to meet you.");
+            Console.ReadLine();
+
+            Console.WriteLine("how old are you "+name);
+            temp = Console.ReadLine();
+            age = Convert.ToInt32(temp);
+
+
+            Console.WriteLine("what course are you in?");
+            course = Console.ReadLine();
+
+            if (course == IT) 
+            {
+                Console.WriteLine("ah I see you have made a good choice");
+                Console.ReadLine();
+            }
+
+            else
+            {
+                Console.WriteLine("it isnt an IT course but it will work");
+            }
+
+            Console.WriteLine("Are you living at home or in a flat?");
+            living = Console.ReadLine();
+            if (living == home)
+            {
+                Console.WriteLine("i see that there is no place like home, and mums cooking");
+            }
+
+            else if (living == flat)
+            {
+                Console.WriteLine("hope you do you fair share of the dishes");
+            }
+            else
+            {
+                Console.WriteLine("");
+            }
+            Console.ReadLine();
+            Console.WriteLine("");
             //What is your name?
             //How old are you?
             //What course are you in?
