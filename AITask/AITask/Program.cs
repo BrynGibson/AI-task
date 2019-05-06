@@ -9,10 +9,12 @@ namespace AITask
     class ITTeacher
     {
         private static string userInput;
+        
 
         static void Main()
         {
             //IT TEACHER INTERVIEWER
+            //Modified Code from Lab 18 Programming to fit project requirements.
 
             do
             {
@@ -135,24 +137,70 @@ namespace AITask
             CourseRelated();
         }
 
+        // THIS IS MATTS VARIABLES.
+        private static string CRanswer1, CRanswer2, CRanswer3;
+
+
+
+
+
+
         static void CourseRelated()
         {
             ///////// MATTS, DONT TOUCH ///////////
-            Console.WriteLine("This is Task 2");
+
+            Console.WriteLine("I will now ask you questions about the course..");
+            Console.ReadLine();
+            //Console.Clear();
+
+            Console.WriteLine("You mentioned you study IT, are you enjoying it?");
+            CRanswer1 = Console.ReadLine();
             Console.WriteLine();
-            //You mentioned you study IT, are you enjoying it? 
-            //What is your favorite class?
-            //Are you doing well? 
+            //Console.Clear();
+
+            if (CRanswer1 == "no")
+            {                          
+                HealthWellBeing();
+            }
+            else
+            {
+
+            }
+
+            Console.WriteLine("What is your favourite class?");
+            CRanswer2 = Console.ReadLine();
+            Console.WriteLine();
+            //Console.Clear();
+
+            Console.WriteLine("Are you doing well?");
+            CRanswer3 = Console.ReadLine();
+            Console.WriteLine();
+            //Console.Clear();
+            
+
             Console.ReadLine();
             Console.Clear();
             HealthWellBeing();
         }
 
+
+        private static int sleeptime;
+
+
         static void HealthWellBeing()
         {
             ////////// HAROLDS DONT TOUCH ///////////
-            Console.WriteLine("This is Task 3");
-            Console.WriteLine();
+            Console.WriteLine("I will now ask you questions about your health and well-being.");
+            Console.WriteLine("Press enter to continue.");
+            Console.ReadLine();
+            Console.Clear();
+
+            Console.WriteLine("How many hours of sleep do you get on average?");
+            sleeptime = Convert.ToInt32(Console.ReadLine());
+            if (sleeptime < 6)
+            {
+                Console.WriteLine("I would recommend you get more than seven hours of sleep");
+            }
             //How many hours of sleep do you average?
             //Are you generally quite happy?
             //Do you have any health issues?
