@@ -103,11 +103,22 @@ namespace AITask
             HealthWellBeing();
         }
 
+        private static int sleeptime;
+
         static void HealthWellBeing()
         {
             ////////// HAROLDS DONT TOUCH ///////////
-            Console.WriteLine("This is Task 3");
-            Console.WriteLine();
+            Console.WriteLine("I will now ask you questions about your health and well-being.");
+            Console.WriteLine("Press enter to continue.");
+            Console.ReadLine();
+            Console.Clear();
+
+            Console.WriteLine("How many hours of sleep do you get on average?");
+            sleeptime = Convert.ToInt32(Console.ReadLine());
+            if (sleeptime < 6)
+            {
+                Console.WriteLine("I would recommend you get more than seven hours of sleep");
+            }
             //How many hours of sleep do you average?
             //Are you generally quite happy?
             //Do you have any health issues?
