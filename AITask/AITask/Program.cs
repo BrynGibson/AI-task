@@ -185,22 +185,51 @@ namespace AITask
 
 
         private static int sleeptime;
+        private static string phyHP;
 
 
         static void HealthWellBeing()
         {
             ////////// HAROLDS DONT TOUCH ///////////
-            Console.WriteLine("I will now ask you questions about your health and well-being.");
-            Console.WriteLine("Press enter to continue.");
-            Console.ReadLine();
-            Console.Clear();
 
-            Console.WriteLine("How many hours of sleep do you get on average?");
-            sleeptime = Convert.ToInt32(Console.ReadLine());
-            if (sleeptime < 6)
+            if (CRanswer1 == "no")
             {
-                Console.WriteLine("I would recommend you get more than seven hours of sleep");
+                Console.WriteLine("What is preventing you from enjoying it that we could help with?");
+
             }
+            else
+            {
+                Console.WriteLine("I would like to ask you some questions about your general health and well-being.");
+                Console.WriteLine("Press enter to continue.");
+                Console.ReadLine();
+                Console.Clear();
+            }
+                Console.Write("How many hours of sleep do you get on average?");
+                sleeptime = Convert.ToInt32(Console.ReadLine());
+                if (sleeptime < 6)
+                {
+                    Console.WriteLine("I would recommend you get at least six or more hours of sleep, that's the minimum for a decent night's rest.");
+                }
+                Console.WriteLine("Press enter to continue.");
+                Console.ReadLine();
+                Console.Clear();
+
+                Console.Write("Do you have any physical health issues that could affect your learning? (y/n): ");
+                phyHP = Console.ReadLine();
+                Console.Clear();
+                if ((phyHP == "y") || (phyHP == "Y"))
+                {
+                    Console.WriteLine("In that case, I would recommend going onto the Student Success website where you can get help to alleviate this so it won't affect your learning as much.");
+                    Console.WriteLine("https://studentservices.op.ac.nz/home/student-success/");
+                }
+                else
+                {
+                Console.WriteLine("Ah, that's good. Every student must be at their best condition when learning.");
+                }
+                Console.WriteLine("Press enter to continue.");
+                Console.ReadLine();
+                Console.Clear();
+
             //How many hours of sleep do you average?
             //Are you generally quite happy?
             //Do you have any health issues?
