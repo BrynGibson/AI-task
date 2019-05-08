@@ -77,8 +77,8 @@ namespace AITask
         }
 
         private static string temp;
-        private static char name, course, IT, living, home, flat;
-        private static int age;
+        private static string name, course, IT, living, home, flat, siborder;
+        private static int age, siblings;
         static void GeneralQuestions()
         {
             //////////////// SAMS DONT TOUCH //////////////////
@@ -98,7 +98,7 @@ namespace AITask
             Console.WriteLine("what course are you in?");
             course = Console.ReadLine();
 
-            if (course == IT) 
+            if (course == "IT") 
             {
                 Console.WriteLine("ah I see you have made a good choice");
                 Console.ReadLine();
@@ -109,22 +109,82 @@ namespace AITask
                 Console.WriteLine("it isnt an IT course but it will work");
             }
 
-            Console.WriteLine("Are you living at home or in a flat?");
+            Console.WriteLine("Are you living at home or in a flat, if none of these where else?");
             living = Console.ReadLine();
-            if (living == home)
+            if (living == "home")
             {
-                Console.WriteLine("i see that there is no place like home, and mums cooking");
+                Console.WriteLine("i see that there is no place like home, and mums cooking!");
             }
 
-            else if (living == flat)
+            else if (living == "flat")
             {
-                Console.WriteLine("hope you do you fair share of the dishes");
+                Console.WriteLine("hope you do you fair share of the dishes!");
             }
             else
             {
-                Console.WriteLine("");
+                Console.WriteLine("I hope that is working well for you!");
             }
-            Console.ReadLine();
+
+            Console.WriteLine("How many siblings do you have?");
+            temp = Console.ReadLine();
+            int sibage = Convert.ToInt32(temp);
+
+            switch (siblings)
+            {
+                case 0:
+                    Console.WriteLine("Man I with I could grow up with no siblings, they were quite annoying");
+                    Console.ReadLine();
+                    break;
+                case 1:
+                    Console.WriteLine("its alwasy good to have someone by your side throughout your life, where they an older or younger sibling?");
+                    siborder = Console.ReadLine();
+                    if (siborder == "older")
+                    {
+                        Console.WriteLine("hope they wernt to harsh on you, you most likely annoyed the hell outof them anyway");
+                        Console.ReadLine();
+                    }
+                    else if (siborder == "younger")
+                    {
+                        Console.WriteLine("hope you wernt to harsh on them, they probably gave you hell anyway");
+                        Console.ReadLine();
+                    }
+                    else
+                    {
+                        Console.WriteLine("i dont think that quite answers my question...");
+                        Console.ReadLine();
+                    }
+                    break;
+                case 2:
+                    Console.WriteLine("multiple annoying siblings, were you the oldest, middle or youngest child?");
+                    Console.ReadLine();
+                    if (siborder == "youngest")
+                    {
+                        Console.WriteLine("hope they wernt to harsh on you, you most likely annoyed the hell outof them anyway");
+                        Console.ReadLine();
+                    }
+                    else if (siborder == "oldest")
+                    {
+                        Console.WriteLine("hope you wernt to harsh on them, they probably gave you hell anyway");
+                        Console.ReadLine();
+                    }
+
+                    else if (siborder == "middle")
+                    {
+                        Console.WriteLine("right in the middle of everything, hope they were kind to you");
+                        Console.ReadLine();
+                    }
+                    else
+                    {
+                        Console.WriteLine("i dont think that quite answers my question...");
+                        Console.ReadLine();
+                    }
+                    break;
+                    defult:
+                    Console.WriteLine("wow thats a large family, I hope your childhood was good");
+                    Console.ReadLine();
+                    break;
+                        
+            }
             Console.WriteLine("");
             //What is your name?
             //How old are you?
@@ -132,6 +192,7 @@ namespace AITask
             //Do you live in a flat?
             //How many siblings do you have?
             //Do you have a job?
+            Console.WriteLine("please press entre to continue");
             Console.ReadLine();
             Console.Clear();
             CourseRelated();
