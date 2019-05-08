@@ -19,6 +19,8 @@ namespace AITask
             do
             {
 
+                HealthWellBeing();
+
                 Console.WriteLine("What set of questions would you like me to ask you?");
                 Console.WriteLine();
                 //Console.WriteLine("1  -  General Questions");
@@ -85,7 +87,7 @@ namespace AITask
             Console.WriteLine("Hello, I am the AI IT teacher, i want to ask you a few questions so i can get to know you.");
             Console.WriteLine();
             Console.WriteLine("what is your name?");
-            name = Console.ReadLine();
+            name = Convert.ToChar(Console.ReadLine());
 
             Console.WriteLine("Hello "+name+", nice to meet you.");
             Console.ReadLine();
@@ -96,7 +98,7 @@ namespace AITask
 
 
             Console.WriteLine("what course are you in?");
-            course = Console.ReadLine();
+            course = Convert.ToChar(Console.ReadLine());
 
             if (course == "IT") 
             {
@@ -109,9 +111,15 @@ namespace AITask
                 Console.WriteLine("it isnt an IT course but it will work");
             }
 
+<<<<<<< HEAD
             Console.WriteLine("Are you living at home or in a flat, if none of these where else?");
             living = Console.ReadLine();
             if (living == "home")
+=======
+            Console.WriteLine("Are you living at home or in a flat?");
+            living = Convert.ToChar(Console.ReadLine());
+            if (living == home)
+>>>>>>> 832b93d57930a395ffbdee686caf62d3a8cc419a
             {
                 Console.WriteLine("i see that there is no place like home, and mums cooking!");
             }
@@ -261,35 +269,58 @@ namespace AITask
             else
             {
                 Console.WriteLine("I would like to ask you some questions about your general health and well-being.");
+                Console.WriteLine();
                 Console.WriteLine("Press enter to continue.");
                 Console.ReadLine();
                 Console.Clear();
             }
-                Console.Write("How many hours of sleep do you get on average?");
-                sleeptime = Convert.ToInt32(Console.ReadLine());
-                if (sleeptime < 6)
-                {
-                    Console.WriteLine("I would recommend you get at least six or more hours of sleep, that's the minimum for a decent night's rest.");
-                }
-                Console.WriteLine("Press enter to continue.");
-                Console.ReadLine();
-                Console.Clear();
 
-                Console.Write("Do you have any physical health issues that could affect your learning? (y/n): ");
-                phyHP = Console.ReadLine();
-                Console.Clear();
-                if ((phyHP == "y") || (phyHP == "Y"))
-                {
-                    Console.WriteLine("In that case, I would recommend going onto the Student Success website where you can get help to alleviate this so it won't affect your learning as much.");
-                    Console.WriteLine("https://studentservices.op.ac.nz/home/student-success/");
+            Console.Write("How many hours of sleep do you get on average? ");
+            sleeptime = Convert.ToInt32(Console.ReadLine());
+            Console.Clear();
+
+            if (sleeptime < 6)
+            {
+                Console.WriteLine("I would recommend you get at least six or more hours of sleep, that's the minimum for a decent night's rest.");
+                Console.WriteLine();
+            }
+            else
+            {
+                Console.WriteLine("Awesome, you're getting a good amount of sleep everyday so you'll be fully refreshed!");
+                Console.WriteLine();
+            }
+            Console.WriteLine("Press enter to continue.");
+            Console.ReadLine();
+            Console.Clear();
+
+            Console.Write("Do you have any physical health issues that could affect your learning? (y/n): ");
+            phyHP = Console.ReadLine();
+            Console.Clear();
+
+            if ((phyHP == "y") || (phyHP == "Y"))
+            {
+                if (sleeptime < 6)
+                {                  
+                    Console.WriteLine("I would recommend you talk with your lecturers and Student Success so we know how they can help.");
+                    Console.WriteLine();
+                    Console.WriteLine("Along with little sleep, this could eventually lead to something bad.");
                 }
                 else
                 {
-                Console.WriteLine("Ah, that's good. Every student must be at their best condition when learning.");
+                    Console.WriteLine("In that case, I would recommend going onto the Student Success website where you can get help to alleviate this.");
+                    Console.WriteLine("You are getting the right amount of sleep which helps.");
+                    Console.WriteLine();
+                    Console.WriteLine("https://studentservices.op.ac.nz/home/student-success/");
                 }
-                Console.WriteLine("Press enter to continue.");
-                Console.ReadLine();
-                Console.Clear();
+            }
+            else
+            {
+                Console.WriteLine("Ah, that's good. Every student must be at their best condition when learning.");
+            }
+            Console.WriteLine();
+            Console.WriteLine("Press enter to continue.");
+            Console.ReadLine();
+            Console.Clear();
 
             //How many hours of sleep do you average?
             //Are you generally quite happy?
