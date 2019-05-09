@@ -9,7 +9,7 @@ namespace AITask
     class ITTeacher
     {
         private static string userInput;
-        
+
 
         static void Main()
         {
@@ -36,11 +36,11 @@ namespace AITask
                 switch (userInput)
                 {
                     //case "1":
-                        //GeneralQuestions();
-                       // Console.WriteLine("Press enter to return to the menu.");
-                       // Console.ReadLine();
-                       // Console.Clear();
-                       // break;
+                    //GeneralQuestions();
+                    // Console.WriteLine("Press enter to return to the menu.");
+                    // Console.ReadLine();
+                    // Console.Clear();
+                    // break;
                     case "1":
                         CourseRelated();
                         Console.WriteLine("Press enter to return to the menu.");
@@ -89,10 +89,10 @@ namespace AITask
             Console.WriteLine("what is your name?");
             name = Convert.ToChar(Console.ReadLine());
 
-            Console.WriteLine("Hello "+name+", nice to meet you.");
+            Console.WriteLine("Hello " + name + ", nice to meet you.");
             Console.ReadLine();
 
-            Console.WriteLine("how old are you "+name);
+            Console.WriteLine("how old are you " + name);
             temp = Console.ReadLine();
             age = Convert.ToInt32(temp);
 
@@ -100,7 +100,7 @@ namespace AITask
             Console.WriteLine("what course are you in?");
             course = Convert.ToChar(Console.ReadLine());
 
-            if (course == "IT") 
+            if (course == "IT")
             {
                 Console.WriteLine("ah I see you have made a good choice");
                 Console.ReadLine();
@@ -187,11 +187,11 @@ namespace AITask
                         Console.ReadLine();
                     }
                     break;
-                    defult:
+                defult:
                     Console.WriteLine("wow thats a large family, I hope your childhood was good");
                     Console.ReadLine();
                     break;
-                        
+
             }
             Console.WriteLine("");
             //What is your name?
@@ -228,7 +228,7 @@ namespace AITask
             //Console.Clear();
 
             if (CRanswer1 == "no")
-            {                          
+            {
                 HealthWellBeing();
             }
             else
@@ -245,7 +245,7 @@ namespace AITask
             CRanswer3 = Console.ReadLine();
             Console.WriteLine();
             //Console.Clear();
-            
+
 
             Console.ReadLine();
             Console.Clear();
@@ -300,7 +300,7 @@ namespace AITask
             if ((phyHP == "y") || (phyHP == "Y"))
             {
                 if (sleeptime < 6)
-                {                  
+                {
                     Console.WriteLine("I would recommend you talk with your lecturers and Student Success so we know how they can help.");
                     Console.WriteLine();
                     Console.WriteLine("Along with little sleep, this could eventually lead to something bad.");
@@ -331,11 +331,99 @@ namespace AITask
             FuturePlans();
         }
 
+
+        ///Bryns Variables///
+        private static string itprospect, workpref;
+        private static char itjob, dunwork;
+        private static int x;
         static void FuturePlans()
         {
             /////////////// BRYNS DONT TOUCH ////////////////////
             Console.WriteLine("This is Task 4");
-            Console.WriteLine();
+
+
+            Console.WriteLine("Are you looking for a job in it?[Y/N]");
+
+
+            itjob = Convert.ToChar(Console.ReadLine());
+
+
+            if ((itjob == 'y') || (itjob == 'Y'))
+            {
+                Console.WriteLine("");
+            }
+
+            else
+            {
+                Console.WriteLine("something");
+            }
+
+            Console.Clear();
+
+            if(itjob == 'y' || itjob == 'Y')
+            {
+                Console.WriteLine("What sort of a job are you looking for in the IT industry?");
+                Console.WriteLine();
+                Console.WriteLine("1   Programmer\n2   Systems Admin\n3   Database Manager\n4   Project Leader\n5   Other");
+
+                 x = Convert.ToInt16(Console.ReadLine());
+
+                Console.Clear();
+
+                switch (x)
+                {
+                    case 1:
+                        Console.WriteLine("something");
+                        itprospect = "programmer";
+                        break;
+
+                    case 2:
+                        Console.WriteLine("something");
+                        itprospect = "Systems Admin";
+                        break;
+
+                    case 3:
+                        Console.WriteLine("something");
+                        itprospect = "Database Manager";
+                        break;
+
+                    case 4:
+                        Console.WriteLine("something");
+                        itprospect = "Project Leader";
+                        break;
+
+                    case 5:
+                        Console.WriteLine("something");
+                        Console.WriteLine("Please enter what IT career you are intrested in");
+                        itprospect = Console.ReadLine();
+                        break;
+                }
+                
+
+            }
+
+            Console.Clear();
+
+            Console.WriteLine("Would you like to stay in Dunedin for work?[Y/N]");
+
+            dunwork = Convert.ToChar(Console.ReadLine());
+
+            Console.Clear();
+
+            if (dunwork == 'y' || dunwork == 'Y')
+            {
+                Console.WriteLine("Thats good Dunedin is a nice place");
+                workpref = "Dunedin";
+            }
+
+            else
+            {
+                Console.WriteLine("Where would you prefer to work?");
+                workpref = Console.ReadLine();
+            }
+
+            Console.WriteLine("Best wishes");
+            
             //Are you looking for a job in IT?
             //What are you wanting to do? (programmer etc) (switch statement for answers)
             //Do you want to stay in Dunedin with work? (if no, where would you like to go?(country))
@@ -343,6 +431,8 @@ namespace AITask
             Console.ReadLine();
             Console.Clear();
             
+            
+           } 
         }
     }
 }
