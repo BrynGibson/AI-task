@@ -21,13 +21,14 @@ namespace AITask
             do
             {
                 Console.WriteLine("Hello, this is a terminal where you'll be talking with our prototype artificial intelligence!");
-                Thread.Sleep(2000);
+                Thread.Sleep(3000);
                 Console.WriteLine();
                 Console.WriteLine("This A.I in particular is programmed to have the personality of an I.T teacher!");
-                Thread.Sleep(2000);
-                Console.WriteLine();
-                Console.Write("Loading...");
                 Thread.Sleep(3000);
+                Console.WriteLine();
+                Console.WriteLine("Loading...");
+                Thread.Sleep(3000);
+                Console.Clear();
 
                 GeneralQuestions();
                 
@@ -84,7 +85,7 @@ namespace AITask
                         case "0":
                             break;
                         default:
-                            Console.WriteLine("That ain't an option.");
+                            Console.WriteLine("That isnt an option.");
                             Console.WriteLine();
                             Console.WriteLine("Press enter to return to menu.");
                             Console.ReadLine();
@@ -110,7 +111,8 @@ namespace AITask
             //////////////// SAMS DONT TOUCH //////////////////
 
 
-            Console.WriteLine("Hello, I am the AI IT teacher, I want to ask you a few questions so I can get to know you, What is your name? Type it out to me and then press entre and I will remmeber your answers");
+            Console.WriteLine("Hello, I am the AI IT teacher, I want to ask you a few questions so I can get to know you.");
+            Console.WriteLine("What is your name? Type it out to me and then press entre and I will remmeber your answers");
             name = Console.ReadLine();
             Console.Clear();
 
@@ -138,6 +140,8 @@ namespace AITask
             else if ((course == "no")||(course == "No"))
             {
                 Console.WriteLine("That is ok, you are allowed to do whatever you would like in your life!");
+                Console.ReadLine();
+                Console.Clear();
             }
 
             else
@@ -187,13 +191,13 @@ namespace AITask
                 case 1:
                     Console.WriteLine("Its alwasy good to have someone by your side throughout your life, where they an older or younger sibling?");
                     siborder = Console.ReadLine();
-                    if (siborder == "older")
+                    if ((siborder == "older")|| (siborder == "Older"))
                     {
-                        Console.WriteLine("Hope they wernt to harsh on you, you most likely annoyed the hell outof them anyway!");
+                        Console.WriteLine("Hope they wernt to harsh on you, you most likely annoyed the hell out of them anyway!");
                         Console.ReadLine();
                         Console.Clear();
                     }
-                    else if (siborder == "younger")
+                    else if ((siborder == "younger")|| (siborder == "Younger"))
                     {
                         Console.WriteLine("Hope you wernt to harsh on them, they probably gave you hell anyway!");
                         Console.ReadLine();
@@ -208,23 +212,23 @@ namespace AITask
                     break;
                 case 2:
                     Console.WriteLine("multiple annoying siblings, were you the oldest, middle or youngest child?");
-                    Console.ReadLine();
+                    siborder = Console.ReadLine();
                     Console.Clear();
 
-                    if (siborder == "youngest")
+                    if ((siborder == "youngest")|| (siborder == "Youngest"))
                     {
                         Console.WriteLine("Hope they wernt to harsh on you, you most likely annoyed the hell outof them anyway!");
                         Console.ReadLine();
                         Console.Clear();
                     }
-                    else if (siborder == "oldest")
+                    else if ((siborder == "oldest")|| (siborder == "Oldest"))
                     {
                         Console.WriteLine("Hope you wernt to harsh on them, they probably gave you hell anyway!");
                         Console.ReadLine();
                         Console.Clear();
                     }
 
-                    else if (siborder == "middle")
+                    else if ((siborder == "middle")|| (siborder == "Middle"))
                     {
                         Console.WriteLine("Right in the middle of everything, hope they were kind to you!");
                         Console.ReadLine();
