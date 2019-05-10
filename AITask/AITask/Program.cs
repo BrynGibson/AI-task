@@ -9,6 +9,7 @@ namespace AITask
     class ITTeacher
     {
         private static string userInput;
+        private static char askqAgain;
 
 
         static void Main()
@@ -19,63 +20,77 @@ namespace AITask
             do
             {
 
-                HealthWellBeing();
+                
 
-                Console.WriteLine("What set of questions would you like me to ask you?");
+                Console.WriteLine($"Thank you for answering some questions {name}! I wish you luck in your future endeavors!");
                 Console.WriteLine();
-                //Console.WriteLine("1  -  General Questions");
-                Console.WriteLine("1  -  Course Related");
-                Console.WriteLine("2  -  Health/Wellbeing");
-                Console.WriteLine("3  -  Future Plans");
-                Console.WriteLine("0  -  Exit menu system");
-                Console.WriteLine();
-                Console.Write("Input selection: ");
-                userInput = Console.ReadLine();
+                Console.Write($"Would you like to change some of your answers on questions in a specific category, {name}? (y/n): ");
+                askqAgain = Convert.ToChar(Console.ReadLine());
                 Console.Clear();
 
-                switch (userInput)
+                if ((askqAgain == 'N') || (askqAgain == 'n'))
                 {
-                    //case "1":
-                    //GeneralQuestions();
-                    // Console.WriteLine("Press enter to return to the menu.");
-                    // Console.ReadLine();
-                    // Console.Clear();
-                    // break;
-                    case "1":
-                        CourseRelated();
-                        Console.WriteLine("Press enter to return to the menu.");
-                        Console.ReadLine();
-                        Console.Clear();
-                        break;
-                    case "2":
-                        HealthWellBeing();
-                        Console.WriteLine("Press enter to return to the menu.");
-                        Console.ReadLine();
-                        Console.Clear();
-                        break;
-                    case "3":
-                        FuturePlans();
-                        Console.WriteLine("Press enter to return to the menu.");
-                        Console.ReadLine();
-                        Console.Clear();
-                        break;
-                    case "0":
-                        break;
-                    default:
-                        Console.WriteLine("That ain't an option.");
-                        Console.WriteLine();
-                        Console.WriteLine("Press enter to return to menu.");
-                        Console.ReadLine();
-                        Console.Clear();
-                        break;
+                    userInput = "0";
+                }
+                else
+                {
+                    Console.WriteLine("What set of questions would you like me to ask you?");
+                    Console.WriteLine();
+                    //Console.WriteLine("1  -  General Questions");
+                    Console.WriteLine("1  -  Course Related");
+                    Console.WriteLine("2  -  Health/Wellbeing");
+                    Console.WriteLine("3  -  Future Plans");
+                    Console.WriteLine("0  -  Exit menu system");
+                    Console.WriteLine();
+                    Console.Write("Input selection: ");
+                    userInput = Console.ReadLine();
+                    Console.Clear();
+
+                    switch (userInput)
+                    {
+                        //case "1":
+                        //GeneralQuestions();
+                        // Console.WriteLine("Press enter to return to the menu.");
+                        // Console.ReadLine();
+                        // Console.Clear();
+                        // break;
+                        case "1":
+                            CourseRelated();
+                            Console.WriteLine("Press enter to return to the menu.");
+                            Console.ReadLine();
+                            Console.Clear();
+                            break;
+                        case "2":
+                            HealthWellBeing();
+                            Console.WriteLine("Press enter to return to the menu.");
+                            Console.ReadLine();
+                            Console.Clear();
+                            break;
+                        case "3":
+                            FuturePlans();
+                            Console.WriteLine("Press enter to return to the menu.");
+                            Console.ReadLine();
+                            Console.Clear();
+                            break;
+                        case "0":
+                            break;
+                        default:
+                            Console.WriteLine("That ain't an option.");
+                            Console.WriteLine();
+                            Console.WriteLine("Press enter to return to menu.");
+                            Console.ReadLine();
+                            Console.Clear();
+                            break;
+                    }
                 }
 
             } while (userInput != "0");
 
-            Console.WriteLine("You have decided to exit the program.");
+            Console.WriteLine("Thank you for talking with our I.T Teacher A.I!");
             Console.WriteLine();
             Console.WriteLine("Press enter to exit.");
             Console.ReadLine();
+                
         }
 
         private static string temp;
