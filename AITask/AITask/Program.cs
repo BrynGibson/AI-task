@@ -16,13 +16,21 @@ namespace AITask
         static void Main()
         {
             //IT TEACHER INTERVIEWER
-            //Modified Code from Lab 18 Programming to fit project requirements.
+            //(heavily) Modified Code from Lab 18 Programming to fit project requirements.
 
             do
             {
+                Console.WriteLine("Hello, this is a terminal where you'll be talking with our prototype artificial intelligence!");
+                Thread.Sleep(2000);
+                Console.WriteLine();
+                Console.WriteLine("This A.I in particular is programmed to have the personality of an I.T teacher!");
+                Thread.Sleep(2000);
+                Console.WriteLine();
+                Console.Write("Loading...");
+                Thread.Sleep(3000);
 
+                GeneralQuestions();
                 
-
                 Console.WriteLine($"Thank you for answering some questions {name}! I wish you luck in your future endeavors!");
                 Console.WriteLine();
                 Console.Write($"Would you like to change some of your answers on questions in a specific category, {name}? (y/n): ");
@@ -37,7 +45,7 @@ namespace AITask
                 {
                     Console.WriteLine("What set of questions would you like me to ask you?");
                     Console.WriteLine();
-                    //Console.WriteLine("1  -  General Questions");
+                    Console.WriteLine("1  -  General Questions");
                     Console.WriteLine("1  -  Course Related");
                     Console.WriteLine("2  -  Health/Wellbeing");
                     Console.WriteLine("3  -  Future Plans");
@@ -100,60 +108,78 @@ namespace AITask
         static void GeneralQuestions()
         {
             //////////////// SAMS DONT TOUCH //////////////////
-            Console.WriteLine("Hello, I am the AI IT teacher, i want to ask you a few questions so i can get to know you.");
+            Console.WriteLine("Hello, I am the AI IT teacher, I want to ask you a few questions so I can get to know you, press entre to continue.");
             Console.WriteLine();
-            Console.WriteLine("What is your name?");
+            Console.Clear();
+
+            Console.WriteLine("What is your name? Type it out to me and then press entre and I will remmeber your answers");
             name = Console.ReadLine();
+            Console.Clear();
 
             Console.WriteLine("Hello " + name + ", nice to meet you!");
             Console.ReadLine();
+            Console.Clear();
 
             Console.WriteLine("how old are you " + name+ "?");
             temp = Console.ReadLine();
             age = Convert.ToInt32(temp);
+            Console.Clear();
 
 
-            Console.WriteLine("What course are you in?");
+            Console.WriteLine("What course are you enrolled in?  (IT for example)");
             course = Console.ReadLine();
+            Console.Clear();
 
-            if (course == "IT")
+            if ((course == "IT")|| (course == "it"))
             {
-                Console.WriteLine("Ah I see you have made a good choice!");
+                Console.WriteLine("Ah an IT student, I see you have made a good choice!");
                 Console.ReadLine();
+                Console.Clear();
             }
 
             else
             {
-                Console.WriteLine("It isnt an IT course but it will work!");
+                Console.WriteLine("It isnt an IT course but it will work! I myself am an IT teacher so I will not be able to help you with questions from other courses.");
+                Console.ReadLine();
+                Console.Clear();
             }
 
 
-            Console.WriteLine("Are you living at home or in a flat, if none of these where else?");
+            Console.WriteLine("Are you living at home or in a flat. (home/flat)");
             living = Console.ReadLine();
-            if (living == "home")
+            Console.Clear();
+            if ((living == "home") || (living == "Home"))
 
             {
                 Console.WriteLine("I see that there is no place like home, and mums cooking!");
+                Console.ReadLine();
+                Console.Clear();
             }
 
-            else if (living == "flat")
+            else if ((living == "flat")|| (living == "Flat"))
             {
                 Console.WriteLine("Hope you do you fair share of the dishes!");
+                Console.ReadLine();
+                Console.Clear();
             }
             else
             {
-                Console.WriteLine("I hope that is working well for you!");
+                Console.WriteLine("Im not quite sure what that is, try answering home or flat, if you answerd something other then home or a flat I am sorry but that is not in my database.");
+                Console.ReadLine();
+                Console.Clear();
             }
 
             Console.WriteLine("How many siblings do you have?");
             temp = Console.ReadLine();
             int sibage = Convert.ToInt32(temp);
+            Console.Clear();
 
             switch (siblings)
             {
                 case 0:
                     Console.WriteLine("I with I could have grown up with no siblings, they were quite annoying.");
                     Console.ReadLine();
+                    Console.Clear();
                     break;
                 case 1:
                     Console.WriteLine("Its alwasy good to have someone by your side throughout your life, where they an older or younger sibling?");
@@ -162,67 +188,86 @@ namespace AITask
                     {
                         Console.WriteLine("Hope they wernt to harsh on you, you most likely annoyed the hell outof them anyway!");
                         Console.ReadLine();
+                        Console.Clear();
                     }
                     else if (siborder == "younger")
                     {
                         Console.WriteLine("Hope you wernt to harsh on them, they probably gave you hell anyway!");
                         Console.ReadLine();
+                        Console.Clear();
                     }
                     else
                     {
                         Console.WriteLine("I dont think that quite answers my question...");
                         Console.ReadLine();
+                        Console.Clear();
                     }
                     break;
                 case 2:
                     Console.WriteLine("multiple annoying siblings, were you the oldest, middle or youngest child?");
                     Console.ReadLine();
+                    Console.Clear();
+
                     if (siborder == "youngest")
                     {
                         Console.WriteLine("Hope they wernt to harsh on you, you most likely annoyed the hell outof them anyway!");
                         Console.ReadLine();
+                        Console.Clear();
                     }
                     else if (siborder == "oldest")
                     {
                         Console.WriteLine("Hope you wernt to harsh on them, they probably gave you hell anyway!");
                         Console.ReadLine();
+                        Console.Clear();
                     }
 
                     else if (siborder == "middle")
                     {
                         Console.WriteLine("Right in the middle of everything, hope they were kind to you!");
                         Console.ReadLine();
+                        Console.Clear();
                     }
                     else
                     {
-                        Console.WriteLine("I dont think that quite answers my question...");
+                        Console.WriteLine("I dont think that quite answers my question, make sure you ar enetering a number");
                         Console.ReadLine();
+                        Console.Clear();
                     }
                     break;
-                defult:
-                    Console.WriteLine("Wow thats a large family, I hope your childhood was good");
+
+                default:
+                    Console.WriteLine("Wow "+siblings+" thats a large family, I hope your childhood was good!");
+
                     Console.ReadLine();
+                    Console.Clear();
                     break;
 
             }
-            Console.WriteLine("Do you have a job?");
+            Console.WriteLine("Do you have a job? (yes/no)");
             string job = Console.ReadLine();
+            Console.Clear();
 
-            if (job == "yes")
+            if ((job == "yes")|| (job == "Yes"))
             {
                 Console.WriteLine("Where do you work?");
                 string wherework = Console.ReadLine();
+                Console.Clear();
+
                 Console.WriteLine("I hope that you are happy working here, and i hope you can ballance work and your course at the same time.");
                 Console.ReadLine();
+                Console.Clear();
             }
-            else if (job == "no")
+            else if ((job == "no")|| (job == "No"))
             {
                 Console.WriteLine("I hope that you have another way to pay for your course.");
                 Console.ReadLine();
+                Console.Clear();
             }
             else
             {
-                Console.WriteLine("Sorry i dont quite understand, its a a yes or no question.");
+                Console.WriteLine("Sorry i dont quite understand, try answering yes or no.");
+                Console.ReadLine();
+                Console.Clear();
             }
 
             //What is your name?
