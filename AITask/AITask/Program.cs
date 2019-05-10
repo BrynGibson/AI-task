@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace AITask
 {
@@ -15,13 +16,21 @@ namespace AITask
         static void Main()
         {
             //IT TEACHER INTERVIEWER
-            //Modified Code from Lab 18 Programming to fit project requirements.
+            //(heavily) Modified Code from Lab 18 Programming to fit project requirements.
 
             do
             {
+                Console.WriteLine("Hello, this is a terminal where you'll be talking with our prototype artificial intelligence!");
+                Thread.Sleep(2000);
+                Console.WriteLine();
+                Console.WriteLine("This A.I in particular is programmed to have the personality of an I.T teacher!");
+                Thread.Sleep(2000);
+                Console.WriteLine();
+                Console.Write("Loading...");
+                Thread.Sleep(3000);
 
+                GeneralQuestions();
                 
-
                 Console.WriteLine($"Thank you for answering some questions {name}! I wish you luck in your future endeavors!");
                 Console.WriteLine();
                 Console.Write($"Would you like to change some of your answers on questions in a specific category, {name}? (y/n): ");
@@ -198,7 +207,7 @@ namespace AITask
                         Console.ReadLine();
                     }
                     break;
-                defult:
+                default:
                     Console.WriteLine("Wow thats a large family, I hope your childhood was good");
                     Console.ReadLine();
                     break;
