@@ -412,23 +412,55 @@ namespace AITask
 
         ///Bryns Variables///
         private static string itprospect, workpref, jobprospect, lang;
-        private static char itjob, dunwork;
-        private static int x, y;
+        private static char itjob, dunwork, itjob2, itthink;
+        private static int x, y, count = 0;
         static void FuturePlans()
         {
             /////////////// BRYNS DONT TOUCH ////////////////////
             Console.WriteLine("This is Task 4");
 
+            count = count + 1;
 
             Console.WriteLine("Are you looking for a job in it?[Y/N]");
 
+            
 
-            itjob = Convert.ToChar(Console.ReadLine());
+            if (count >= 2)
+            {
+                itjob2 = Convert.ToChar(Console.ReadLine());
+
+                if (itjob2 != itjob)
+                {
+                    Console.WriteLine("Thats intresting because when I first asked you, you indicated something different.");
+                    Console.Clear();
+                }
+            }
+
+            else
+            {
+                itjob = Convert.ToChar(Console.ReadLine());
+            }
+            
 
 
             if ((itjob == 'y') || (itjob == 'Y'))
             {
-                Console.WriteLine("IT is a good feild to get involved in, here a link that may provide some infomation on IT careers.\nhttps://www.careers.govt.nz/jobs-database/it-and-telecommunications/");
+                Console.WriteLine("IT is a good feild to get involved in, here a link that may provide some infomation on IT careers.\n https://www.careers.govt.nz/jobs-database/it-and-telecommunications/");
+                Console.ReadLine();
+                Console.Clear();
+                Console.WriteLine("Have you considered studying IT?[Y/N]");
+                itthink = Convert.ToChar(Console.ReadLine());
+
+                if(itthink == 'n' || itthink == 'N')
+                {
+                    if(course == "it" || course == "IT")
+                    {
+                        Console.WriteLine("But... you said you were already studying IT earlier...");
+                        Thread.Sleep(3000);
+                        Console.WriteLine("You better not be lying to me... you know what happens to liars...");
+                    }
+                }
+
             }
 
             else
@@ -452,7 +484,7 @@ namespace AITask
                 switch (x)
                 {
                     case 1:
-                        Console.WriteLine("Programming is wide feild of it. Which language are you most intrested in using?\n1   C#\n2   Java\n3   Python\n4   C++\n5   Other");
+                        Console.WriteLine("Programming is wide field of it. Which language are you most intrested in using?\n1   C#\n2   Java\n3   Python\n4   C++\n5   Other");
                         y = Convert.ToInt32(Console.ReadLine());
 
                         switch (y)
@@ -523,6 +555,8 @@ namespace AITask
                 Console.WriteLine("Where would you prefer to work?");
                 workpref = Console.ReadLine();
             }
+
+            Console.Clear();
 
             Console.WriteLine("Best of luck for your career as a " + itprospect + " based in " + workpref + "." );
             
