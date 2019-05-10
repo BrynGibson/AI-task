@@ -28,9 +28,13 @@ namespace AITask
                 Console.WriteLine();
                 Console.Write("Loading...");
                 Thread.Sleep(3000);
+                Console.Clear();
 
+                //put methods here v
                 GeneralQuestions();
                 
+                //put methods here ^
+
                 Console.WriteLine($"Thank you for answering some questions {name}! I wish you luck in your future endeavors!");
                 Console.WriteLine();
                 Console.Write($"Would you like to change some of your answers on questions in a specific category, {name}? (y/n): ");
