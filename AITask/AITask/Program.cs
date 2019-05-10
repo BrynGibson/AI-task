@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace AITask
 {
@@ -15,13 +16,21 @@ namespace AITask
         static void Main()
         {
             //IT TEACHER INTERVIEWER
-            //Modified Code from Lab 18 Programming to fit project requirements.
+            //(heavily) Modified Code from Lab 18 Programming to fit project requirements.
 
             do
             {
+                Console.WriteLine("Hello, this is a terminal where you'll be talking with our prototype artificial intelligence!");
+                Thread.Sleep(2000);
+                Console.WriteLine();
+                Console.WriteLine("This A.I in particular is programmed to have the personality of an I.T teacher!");
+                Thread.Sleep(2000);
+                Console.WriteLine();
+                Console.Write("Loading...");
+                Thread.Sleep(3000);
 
+                GeneralQuestions();
                 
-
                 Console.WriteLine($"Thank you for answering some questions {name}! I wish you luck in your future endeavors!");
                 Console.WriteLine();
                 Console.Write($"Would you like to change some of your answers on questions in a specific category, {name}? (y/n): ");
@@ -225,8 +234,10 @@ namespace AITask
                         Console.Clear();
                     }
                     break;
-                defult:
+
+                default:
                     Console.WriteLine("Wow "+siblings+" thats a large family, I hope your childhood was good!");
+
                     Console.ReadLine();
                     Console.Clear();
                     break;
@@ -398,9 +409,9 @@ namespace AITask
 
 
         ///Bryns Variables///
-        private static string itprospect, workpref;
+        private static string itprospect, workpref, jobprospect, lang;
         private static char itjob, dunwork;
-        private static int x;
+        private static int x, y;
         static void FuturePlans()
         {
             /////////////// BRYNS DONT TOUCH ////////////////////
@@ -415,12 +426,13 @@ namespace AITask
 
             if ((itjob == 'y') || (itjob == 'Y'))
             {
-                Console.WriteLine("");
+                Console.WriteLine("IT is a good feild to get involved in, here a link that may provide some infomation on IT careers.\nhttps://www.careers.govt.nz/jobs-database/it-and-telecommunications/");
             }
 
             else
             {
-                Console.WriteLine("something");
+                Console.WriteLine("Do you have any other careers you are intrested in? If so please enter here.");
+                itprospect = Console.ReadLine();
             }
 
             Console.Clear();
@@ -438,22 +450,45 @@ namespace AITask
                 switch (x)
                 {
                     case 1:
-                        Console.WriteLine("something");
-                        itprospect = "programmer";
+                        Console.WriteLine("Programming is wide feild of it. Which language are you most intrested in using?\n1   C#\n2   Java\n3   Python\n4   C++\n5   Other");
+                        y = Convert.ToInt32(Console.ReadLine());
+
+                        switch (y)
+                        {
+                            case 1:
+                                lang = "C#";
+                                    break;
+                            case 2:
+                                lang = "Java";
+                                break;
+                            case 3:
+                                lang = "Python";
+                                break;
+                            case 4:
+                                lang = "C++";
+                                break;
+                            case 5:
+                                Console.WriteLine("Please enter the name of the language you are most intrested in using");
+                                lang = Console.ReadLine();
+                                break;
+
+
+                        }
+                        itprospect = "Programmer";
                         break;
 
                     case 2:
-                        Console.WriteLine("something");
+                        Console.WriteLine("A systems admin is a good career path");
                         itprospect = "Systems Admin";
                         break;
 
                     case 3:
-                        Console.WriteLine("something");
+                        Console.WriteLine("Perhaps consider researching or learning about SQL to get a feel of whether this career would be for you.");
                         itprospect = "Database Manager";
                         break;
 
                     case 4:
-                        Console.WriteLine("something");
+                        Console.WriteLine("A project leader requires good leadership and mangment skills");
                         itprospect = "Project Leader";
                         break;
 
@@ -469,7 +504,7 @@ namespace AITask
 
             Console.Clear();
 
-            Console.WriteLine("Would you like to stay in Dunedin for work?[Y/N]");
+            Console.WriteLine("Would you like to stay in Dunedin to continue your career as a " + itprospect + " [Y/N]");
 
             dunwork = Convert.ToChar(Console.ReadLine());
 
@@ -487,7 +522,7 @@ namespace AITask
                 workpref = Console.ReadLine();
             }
 
-            Console.WriteLine("Best wishes");
+            Console.WriteLine("Best of luck for your career as a " + itprospect + " based in " + workpref + "." );
             
             //Are you looking for a job in IT?
             //What are you wanting to do? (programmer etc) (switch statement for answers)
