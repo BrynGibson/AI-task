@@ -11,6 +11,7 @@ namespace AITask
     {
         private static string userInput;
         private static char askqAgain;
+        private static int backtoStart;
 
 
         static void Main()
@@ -20,20 +21,34 @@ namespace AITask
 
             do
             {
-                Console.WriteLine("Hello, this is a terminal where you'll be talking with our prototype artificial intelligence!");
-                Thread.Sleep(3000);
-                Console.WriteLine();
-                Console.WriteLine("This A.I in particular is programmed to have the personality of an I.T teacher!");
-                Thread.Sleep(3000);
-                Console.WriteLine();
-                Console.WriteLine("Loading...");
-                Thread.Sleep(3000);
-                Console.Clear();
 
-                GeneralQuestions();
+  
+
+                if ((backtoStart == 1) || (backtoStart == 2) || (backtoStart == 3) || (backtoStart == 4))
+                {
+                    Console.WriteLine("You will now return to the main menu.");
+                    Thread.Sleep(2000);
+                }
+                else
+                {
+                    Console.WriteLine("Hello, this is a terminal where you'll be talking with our prototype artificial intelligence!\n");
+                    Thread.Sleep(2000);
+
+
+                    Console.WriteLine("This A.I in particular is programmed to have the personality of an I.T teacher!\n");
+                    Thread.Sleep(2000);
+
+                    Console.Write("Loading...");
+                    Thread.Sleep(3000);
+                    Console.Clear();
+                }
+
+                //put methods here v
+                HealthWellBeing();
                 
-                Console.WriteLine($"Thank you for answering some questions {name}! I wish you luck in your future endeavors!");
-                Console.WriteLine();
+                //put methods here ^
+                
+                Console.WriteLine($"Thank you for answering some questions {name}! I wish you luck in your future endeavors!\n");
                 Console.Write($"Would you like to change some of your answers on questions in a specific category, {name}? (y/n): ");
                 askqAgain = Convert.ToChar(Console.ReadLine());
                 Console.Clear();
@@ -47,9 +62,9 @@ namespace AITask
                     Console.WriteLine("What set of questions would you like me to ask you?");
                     Console.WriteLine();
                     Console.WriteLine("1  -  General Questions");
-                    Console.WriteLine("1  -  Course Related");
-                    Console.WriteLine("2  -  Health/Wellbeing");
-                    Console.WriteLine("3  -  Future Plans");
+                    Console.WriteLine("2  -  Course Related");
+                    Console.WriteLine("3  -  Health/Wellbeing");
+                    Console.WriteLine("4  -  Future Plans");
                     Console.WriteLine("0  -  Exit menu system");
                     Console.WriteLine();
                     Console.Write("Input selection: ");
@@ -58,25 +73,29 @@ namespace AITask
 
                     switch (userInput)
                     {
-                        //case "1":
-                        //GeneralQuestions();
-                        // Console.WriteLine("Press enter to return to the menu.");
-                        // Console.ReadLine();
-                        // Console.Clear();
-                        // break;
                         case "1":
+                            backtoStart = 1;
+                            GeneralQuestions();
+                            Console.WriteLine("Press enter to return to the menu.");
+                            Console.ReadLine();
+                            Console.Clear();
+                        break;
+                        case "2":
+                            backtoStart = 2;
                             CourseRelated();
                             Console.WriteLine("Press enter to return to the menu.");
                             Console.ReadLine();
                             Console.Clear();
                             break;
-                        case "2":
+                        case "3":
+                            backtoStart = 3;
                             HealthWellBeing();
                             Console.WriteLine("Press enter to return to the menu.");
                             Console.ReadLine();
                             Console.Clear();
                             break;
-                        case "3":
+                        case "4":
+                            backtoStart = 4;
                             FuturePlans();
                             Console.WriteLine("Press enter to return to the menu.");
                             Console.ReadLine();
@@ -286,6 +305,13 @@ namespace AITask
             Console.WriteLine("Please press entre to continue to course related questions.");
             Console.ReadLine();
             Console.Clear();
+
+            //goes back to start if user already went through all sets of questions and selected this via menu to answer only this particular section
+            if (backtoStart == 1)
+            {
+                Main();
+            }
+
             CourseRelated();
         }
 
@@ -332,6 +358,13 @@ namespace AITask
 
             Console.ReadLine();
             Console.Clear();
+
+            //goes back to start if user already went through all sets of questions and selected this via menu to answer only this particular section
+            if (backtoStart == 2)
+            {
+                Main();
+            }
+
             HealthWellBeing();
         }
 
@@ -343,6 +376,8 @@ namespace AITask
         static void HealthWellBeing()
         {
             ////////// HAROLDS DONT TOUCH ///////////
+            //variables
+            int prevSleep;
 
             if (CRanswer1 == "no")
             {
@@ -364,13 +399,11 @@ namespace AITask
 
             if (sleeptime < 6)
             {
-                Console.WriteLine("I would recommend you get at least six or more hours of sleep, that's the minimum for a decent night's rest.");
-                Console.WriteLine();
+                Console.WriteLine("I would recommend you get at least six or more hours of sleep, that's the minimum for a decent night's rest.\n");
             }
             else
             {
-                Console.WriteLine("Awesome, you're getting a good amount of sleep everyday so you'll be fully refreshed!");
-                Console.WriteLine();
+                Console.WriteLine("Awesome, you're getting a good amount of sleep everyday so you'll be fully refreshed!\n");
             }
             Console.WriteLine("Press enter to continue.");
             Console.ReadLine();
@@ -384,16 +417,15 @@ namespace AITask
             {
                 if (sleeptime < 6)
                 {
-                    Console.WriteLine("I would recommend you talk with your lecturers and Student Success so we know how they can help.");
-                    Console.WriteLine();
+                    Console.WriteLine("I would recommend you talk with your lecturers and Student Success so we know how they can help.\n");
+
                     Console.WriteLine("Along with little sleep, this could eventually lead to something bad.");
                 }
                 else
                 {
-                    Console.WriteLine("In that case, I would recommend going onto the Student Success website where you can get help to alleviate this.");
-                    Console.WriteLine("You are getting the right amount of sleep which helps.");
-                    Console.WriteLine();
+                    Console.WriteLine("In that case, I would recommend going onto the Student Success website where you can get help to alleviate this.\n");
                     Console.WriteLine("https://studentservices.op.ac.nz/home/student-success/");
+                    Console.WriteLine("You are getting the right amount of sleep which helps.\n");   
                 }
             }
             else
@@ -405,6 +437,10 @@ namespace AITask
             Console.ReadLine();
             Console.Clear();
 
+            if (backtoStart == 3)
+            {
+                Main();
+            }
             //How many hours of sleep do you average?
             //Are you generally quite happy?
             //Do you have any health issues?
@@ -571,9 +607,13 @@ namespace AITask
             //Best wishes
             Console.ReadLine();
             Console.Clear();
-            
-            
-            
+
+            //goes back to start if user already went through all sets of questions and selected this via menu to answer only this particular section
+            if (backtoStart == 4)
+            {
+                Main();
+            }
+
         }
     }
 }
