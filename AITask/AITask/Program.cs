@@ -120,19 +120,17 @@ namespace AITask
 
         private static string temp;
         private static string name, course, IT, living, home, flat, siborder;
-        private static int age, siblings;
+        private static int age;
         static void GeneralQuestions()
         {
             //////////////// SAMS DONT TOUCH //////////////////
-            Console.WriteLine("Hello, I am the AI IT teacher, I want to ask you a few questions so I can get to know you, press entre to continue.");
-            Console.WriteLine();
-            Console.Clear();
 
-            Console.WriteLine("What is your name? Type it out to me and then press entre and I will remmeber your answers");
+
+            Console.WriteLine("Hello, I am the AI IT teacher, I want to ask you a few questions so I can get to know you, What is your name? Type it out to me and then press entre and I will remmeber your answers");
             name = Console.ReadLine();
             Console.Clear();
 
-            Console.WriteLine("Hello " + name + ", nice to meet you!");
+            Console.WriteLine("Hello " + name + ", nice to meet you! press entre to continue");
             Console.ReadLine();
             Console.Clear();
 
@@ -142,7 +140,8 @@ namespace AITask
             Console.Clear();
 
 
-            Console.WriteLine("What course are you enrolled in?  (IT for example)");
+            Console.WriteLine("What course are you enrolled in (IT for example)?");
+            Console.WriteLine("if you arnt enroled in a course, enter no");
             course = Console.ReadLine();
             Console.Clear();
 
@@ -151,6 +150,10 @@ namespace AITask
                 Console.WriteLine("Ah an IT student, I see you have made a good choice!");
                 Console.ReadLine();
                 Console.Clear();
+            }
+            else if ((course == "no")||(course == "No"))
+            {
+                Console.WriteLine("That is ok, you are allowed to do whatever you would like in your life!");
             }
 
             else
@@ -190,7 +193,7 @@ namespace AITask
             int sibage = Convert.ToInt32(temp);
             Console.Clear();
 
-            switch (siblings)
+            switch (sibage)
             {
                 case 0:
                     Console.WriteLine("I with I could have grown up with no siblings, they were quite annoying.");
@@ -252,7 +255,7 @@ namespace AITask
                     break;
 
                 default:
-                    Console.WriteLine("Wow "+siblings+" thats a large family, I hope your childhood was good!");
+                    Console.WriteLine("Wow "+sibage+" thats alot of siblings, I hope your childhood wasnt too crazy!");
 
                     Console.ReadLine();
                     Console.Clear();
