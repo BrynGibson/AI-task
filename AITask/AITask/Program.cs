@@ -9,7 +9,7 @@ namespace AITask
 {
     class ITTeacher
     {
-        private static string userInput;
+        private static string userInput, backtoStart;
         private static char askqAgain;
 
 
@@ -20,23 +20,22 @@ namespace AITask
 
             do
             {
-                Console.WriteLine("Hello, this is a terminal where you'll be talking with our prototype artificial intelligence!");
+                Console.WriteLine("Hello, this is a terminal where you'll be talking with our prototype artificial intelligence!\n");
                 Thread.Sleep(2000);
-                Console.WriteLine();
-                Console.WriteLine("This A.I in particular is programmed to have the personality of an I.T teacher!");
+
+                Console.WriteLine("This A.I in particular is programmed to have the personality of an I.T teacher!\n");
                 Thread.Sleep(2000);
-                Console.WriteLine();
+
                 Console.Write("Loading...");
                 Thread.Sleep(3000);
                 Console.Clear();
 
                 //put methods here v
-                GeneralQuestions();
+                HealthWellBeing();
                 
                 //put methods here ^
-
-                Console.WriteLine($"Thank you for answering some questions {name}! I wish you luck in your future endeavors!");
-                Console.WriteLine();
+                
+                Console.WriteLine($"Thank you for answering some questions {name}! I wish you luck in your future endeavors!\n");
                 Console.Write($"Would you like to change some of your answers on questions in a specific category, {name}? (y/n): ");
                 askqAgain = Convert.ToChar(Console.ReadLine());
                 Console.Clear();
@@ -340,6 +339,8 @@ namespace AITask
         static void HealthWellBeing()
         {
             ////////// HAROLDS DONT TOUCH ///////////
+            //variables
+            int prevSleep;
 
             if (CRanswer1 == "no")
             {
@@ -361,13 +362,11 @@ namespace AITask
 
             if (sleeptime < 6)
             {
-                Console.WriteLine("I would recommend you get at least six or more hours of sleep, that's the minimum for a decent night's rest.");
-                Console.WriteLine();
+                Console.WriteLine("I would recommend you get at least six or more hours of sleep, that's the minimum for a decent night's rest.\n");
             }
             else
             {
-                Console.WriteLine("Awesome, you're getting a good amount of sleep everyday so you'll be fully refreshed!");
-                Console.WriteLine();
+                Console.WriteLine("Awesome, you're getting a good amount of sleep everyday so you'll be fully refreshed!\n");
             }
             Console.WriteLine("Press enter to continue.");
             Console.ReadLine();
@@ -381,16 +380,15 @@ namespace AITask
             {
                 if (sleeptime < 6)
                 {
-                    Console.WriteLine("I would recommend you talk with your lecturers and Student Success so we know how they can help.");
-                    Console.WriteLine();
+                    Console.WriteLine("I would recommend you talk with your lecturers and Student Success so we know how they can help.\n");
+
                     Console.WriteLine("Along with little sleep, this could eventually lead to something bad.");
                 }
                 else
                 {
-                    Console.WriteLine("In that case, I would recommend going onto the Student Success website where you can get help to alleviate this.");
-                    Console.WriteLine("You are getting the right amount of sleep which helps.");
-                    Console.WriteLine();
+                    Console.WriteLine("In that case, I would recommend going onto the Student Success website where you can get help to alleviate this.\n");
                     Console.WriteLine("https://studentservices.op.ac.nz/home/student-success/");
+                    Console.WriteLine("You are getting the right amount of sleep which helps.\n");   
                 }
             }
             else
