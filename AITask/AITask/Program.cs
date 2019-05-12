@@ -44,7 +44,7 @@ namespace AITask
                 }
 
                 //put methods here v
-                HealthWellBeing();
+                //HealthWellBeing();
 
                 //put methods here ^
 
@@ -316,7 +316,7 @@ namespace AITask
         }
 
         /// matt's variables.
-        private static string CRanswer1, CRanswer2, CRanswer3;
+        private static string CRanswer1, CRanswer2, CRanswer3, CRanswer4, carname;
 
 
         static void CourseRelated()
@@ -419,6 +419,31 @@ namespace AITask
             Console.ReadLine();
             Console.Clear();
 
+            Console.WriteLine("Do you drive to course?");
+            Console.WriteLine();
+            Console.WriteLine("yes or no?");
+            CRanswer4 = Console.ReadLine();
+            Console.Clear();
+
+            if (CRanswer4 == "yes")
+            {
+                Console.WriteLine("What car do you drive?");
+                carname = Console.ReadLine();
+                Console.Clear();
+            }
+            else if (CRanswer4 == "no")
+            {
+                Console.WriteLine("oh lucky you .. you don't have to search for parks!");
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.WriteLine("that is not an answer I asked for .. but okay then..");
+                Console.ReadLine();
+            }
+
+
+                      
             //goes back to start if user already went through all sets of questions and selected this via menu to answer only this particular section         
             if (backtoStart == 2)
             {
