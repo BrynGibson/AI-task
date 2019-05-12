@@ -22,7 +22,7 @@ namespace AITask
             do
             {
 
-  
+
 
                 if ((backtoStart == 1) || (backtoStart == 2) || (backtoStart == 3) || (backtoStart == 4))
                 {
@@ -45,9 +45,9 @@ namespace AITask
 
                 //put methods here v
                 HealthWellBeing();
-                
+
                 //put methods here ^
-                
+
                 Console.WriteLine($"Thank you for answering some questions {name}! I wish you luck in your future endeavors!\n");
                 Console.Write($"Would you like to change some of your answers on questions in a specific category, {name}? (y/n): ");
                 askqAgain = Convert.ToChar(Console.ReadLine());
@@ -79,7 +79,7 @@ namespace AITask
                             Console.WriteLine("Press enter to return to the menu.");
                             Console.ReadLine();
                             Console.Clear();
-                        break;
+                            break;
                         case "2":
                             backtoStart = 2;
                             CourseRelated();
@@ -119,7 +119,7 @@ namespace AITask
             Console.WriteLine();
             Console.WriteLine("Press enter to exit.");
             Console.ReadLine();
-                
+
         }
 
         private static string temp;
@@ -131,7 +131,7 @@ namespace AITask
 
 
             Console.WriteLine("Hello, I am the AI IT teacher, I want to ask you a few questions so I can get to know you.");
-            Console.WriteLine("What is your name? Type it out to me and then press entre and I will remmeber your answers");
+            Console.WriteLine("What is your name? Type it out to me and then press enter and I will remmeber your answers");
             name = Console.ReadLine();
             Console.Clear();
 
@@ -139,7 +139,7 @@ namespace AITask
             Console.ReadLine();
             Console.Clear();
 
-            Console.WriteLine("how old are you " + name+ "?");
+            Console.WriteLine("how old are you " + name + "?");
             temp = Console.ReadLine();
             age = Convert.ToInt32(temp);
             Console.Clear();
@@ -150,13 +150,13 @@ namespace AITask
             course = Console.ReadLine();
             Console.Clear();
 
-            if ((course == "IT")|| (course == "it"))
+            if ((course == "IT") || (course == "it"))
             {
                 Console.WriteLine("Ah an IT student, I see you have made a good choice!");
                 Console.ReadLine();
                 Console.Clear();
             }
-            else if ((course == "no")||(course == "No"))
+            else if ((course == "no") || (course == "No"))
             {
                 Console.WriteLine("That is ok, you are allowed to do whatever you would like in your life!");
                 Console.ReadLine();
@@ -182,7 +182,7 @@ namespace AITask
                 Console.Clear();
             }
 
-            else if ((living == "flat")|| (living == "Flat"))
+            else if ((living == "flat") || (living == "Flat"))
             {
                 Console.WriteLine("Hope you do you fair share of the dishes!");
                 Console.ReadLine();
@@ -210,13 +210,13 @@ namespace AITask
                 case 1:
                     Console.WriteLine("Its alwasy good to have someone by your side throughout your life, where they an older or younger sibling?");
                     siborder = Console.ReadLine();
-                    if ((siborder == "older")|| (siborder == "Older"))
+                    if ((siborder == "older") || (siborder == "Older"))
                     {
                         Console.WriteLine("Hope they wernt to harsh on you, you most likely annoyed the hell out of them anyway!");
                         Console.ReadLine();
                         Console.Clear();
                     }
-                    else if ((siborder == "younger")|| (siborder == "Younger"))
+                    else if ((siborder == "younger") || (siborder == "Younger"))
                     {
                         Console.WriteLine("Hope you wernt to harsh on them, they probably gave you hell anyway!");
                         Console.ReadLine();
@@ -234,20 +234,20 @@ namespace AITask
                     siborder = Console.ReadLine();
                     Console.Clear();
 
-                    if ((siborder == "youngest")|| (siborder == "Youngest"))
+                    if ((siborder == "youngest") || (siborder == "Youngest"))
                     {
                         Console.WriteLine("Hope they wernt to harsh on you, you most likely annoyed the hell outof them anyway!");
                         Console.ReadLine();
                         Console.Clear();
                     }
-                    else if ((siborder == "oldest")|| (siborder == "Oldest"))
+                    else if ((siborder == "oldest") || (siborder == "Oldest"))
                     {
                         Console.WriteLine("Hope you wernt to harsh on them, they probably gave you hell anyway!");
                         Console.ReadLine();
                         Console.Clear();
                     }
 
-                    else if ((siborder == "middle")|| (siborder == "Middle"))
+                    else if ((siborder == "middle") || (siborder == "Middle"))
                     {
                         Console.WriteLine("Right in the middle of everything, hope they were kind to you!");
                         Console.ReadLine();
@@ -262,7 +262,7 @@ namespace AITask
                     break;
 
                 default:
-                    Console.WriteLine("Wow "+sibage+" thats alot of siblings, I hope your childhood wasnt too crazy!");
+                    Console.WriteLine("Wow " + sibage + " thats alot of siblings, I hope your childhood wasnt too crazy!");
 
                     Console.ReadLine();
                     Console.Clear();
@@ -273,7 +273,7 @@ namespace AITask
             string job = Console.ReadLine();
             Console.Clear();
 
-            if ((job == "yes")|| (job == "Yes"))
+            if ((job == "yes") || (job == "Yes"))
             {
                 Console.WriteLine("Where do you work?");
                 string wherework = Console.ReadLine();
@@ -283,7 +283,7 @@ namespace AITask
                 Console.ReadLine();
                 Console.Clear();
             }
-            else if ((job == "no")|| (job == "No"))
+            else if ((job == "no") || (job == "No"))
             {
                 Console.WriteLine("I hope that you have another way to pay for your course.");
                 Console.ReadLine();
@@ -315,51 +315,111 @@ namespace AITask
             CourseRelated();
         }
 
-        // THIS IS MATTS VARIABLES.
+        /// matt's variables.
         private static string CRanswer1, CRanswer2, CRanswer3;
-
-
-
-
 
 
         static void CourseRelated()
         {
-            ///////// MATTS, DONT TOUCH ///////////
+            /////////// MATTS CODE ///////////
 
-            Console.WriteLine("I will now ask you questions about the course..");
-            Console.ReadLine();
-            //Console.Clear();
+            if ((course == "IT") || (course == "it"))
+            {
+                Console.WriteLine("I will now ask you questions about the course..");
+                Console.ReadLine();
+                Console.WriteLine();
+                Console.WriteLine("press enter to continue..");
+                Console.Clear();
+            }
+
+            else
+            {
+                HealthWellBeing();
+            }
+
 
             Console.WriteLine("You mentioned you study IT, are you enjoying it?");
             CRanswer1 = Console.ReadLine();
             Console.WriteLine();
-            //Console.Clear();
+            Console.WriteLine("yes or no?");
+            Console.Clear();
 
             if (CRanswer1 == "no")
             {
+                Console.WriteLine("Oh such a shame.. I would like to know what it is you don't enjoy about it.");
+                Thread.Sleep(2000);
+                Console.Clear();
                 HealthWellBeing();
+
             }
+            else if (CRanswer1 == "yes")
+            {
+                Console.WriteLine("That's great news! I'm glad you're enjoying it!");
+                Thread.Sleep(2000);
+                Console.Clear();
+
+            }
+
             else
             {
-
+                Console.WriteLine("hmm .. i'm not sure I understand that answer .. but let's carry on.");
+                Console.WriteLine();
+                Console.WriteLine("press enter to continue..");
+                Console.ReadLine();
             }
 
             Console.WriteLine("What is your favourite class?");
+            Console.WriteLine("1 = Professional Practice.");
+            Console.WriteLine("2 = Programming.");
+            Console.WriteLine("3 = Platforms and Devices");
+            Console.WriteLine("4 = Mathmatics.");
             CRanswer2 = Console.ReadLine();
             Console.WriteLine();
-            //Console.Clear();
+            Console.Clear();
+
+            switch (CRanswer1)
+            {
+                case "1":
+                    Console.WriteLine("oooh good answer! Elise is a great lecturer .. and this response should definitely give us bonus points .. wink wink.");
+                    break;
+
+                case "2":
+                    Console.WriteLine("Nice! Programming was one of my favorite classes in the course when i studied also!");
+                    break;
+
+                case "3":
+                    Console.WriteLine("oh good choice! Nothing gets me more excited than hearing what the tech news is for the day!");
+                    break;
+
+                case "4":
+                    Console.WriteLine("wow really? you must be a right nerd.. but okay then.");
+                    break;
+            }
 
             Console.WriteLine("Are you doing well?");
             CRanswer3 = Console.ReadLine();
             Console.WriteLine();
-            //Console.Clear();
+            Console.Clear();
 
+            if ((CRanswer3 == "yes") || (CRanswer3 == "Yes"))
+            {
+                Console.WriteLine("That's awesome! Keep up the great work!");
+            }
+
+            else if ((CRanswer3 == "no") || (CRanswer3 == "No"))
+            {
+                Console.WriteLine("Oh that's not good to hear");
+            }
+
+            else
+            {
+                Console.WriteLine("I'm sorry, I don't understand the answer.. ");
+            }
 
             Console.ReadLine();
             Console.Clear();
 
-            //goes back to start if user already went through all sets of questions and selected this via menu to answer only this particular section
+            //goes back to start if user already went through all sets of questions and selected this via menu to answer only this particular section         
             if (backtoStart == 2)
             {
                 Main();
@@ -425,7 +485,7 @@ namespace AITask
                 {
                     Console.WriteLine("In that case, I would recommend going onto the Student Success website where you can get help to alleviate this.\n");
                     Console.WriteLine("https://studentservices.op.ac.nz/home/student-success/");
-                    Console.WriteLine("You are getting the right amount of sleep which helps.\n");   
+                    Console.WriteLine("You are getting the right amount of sleep which helps.\n");
                 }
             }
             else
@@ -464,7 +524,7 @@ namespace AITask
 
             Console.WriteLine("Are you looking for a job in it?[Y/N]");
 
-            
+
 
             if (count >= 2)
             {
@@ -481,7 +541,7 @@ namespace AITask
             {
                 itjob = Convert.ToChar(Console.ReadLine());
             }
-            
+
 
 
             if ((itjob == 'y') || (itjob == 'Y'))
@@ -492,9 +552,9 @@ namespace AITask
                 Console.WriteLine("Have you considered studying IT?[Y/N]");
                 itthink = Convert.ToChar(Console.ReadLine());
 
-                if(itthink == 'n' || itthink == 'N')
+                if (itthink == 'n' || itthink == 'N')
                 {
-                    if(course == "it" || course == "IT")
+                    if (course == "it" || course == "IT")
                     {
                         Console.WriteLine("But... you said you were already studying IT earlier...");
                         Thread.Sleep(3000);
@@ -512,13 +572,13 @@ namespace AITask
 
             Console.Clear();
 
-            if(itjob == 'y' || itjob == 'Y')
+            if (itjob == 'y' || itjob == 'Y')
             {
                 Console.WriteLine("What sort of a job are you looking for in the IT industry?");
                 Console.WriteLine();
                 Console.WriteLine("1   Programmer\n2   Systems Admin\n3   Database Manager\n4   Project Leader\n5   Other");
 
-                 x = Convert.ToInt16(Console.ReadLine());
+                x = Convert.ToInt16(Console.ReadLine());
 
                 Console.Clear();
 
@@ -532,7 +592,7 @@ namespace AITask
                         {
                             case 1:
                                 lang = "C#";
-                                    break;
+                                break;
                             case 2:
                                 lang = "Java";
                                 break;
@@ -573,7 +633,7 @@ namespace AITask
                         itprospect = Console.ReadLine();
                         break;
                 }
-                
+
 
             }
 
@@ -599,8 +659,8 @@ namespace AITask
 
             Console.Clear();
 
-            Console.WriteLine("Best of luck for your career as a " + itprospect + " based in " + workpref + "." );
-            
+            Console.WriteLine("Best of luck for your career as a " + itprospect + " based in " + workpref + ".");
+
             //Are you looking for a job in IT?
             //What are you wanting to do? (programmer etc) (switch statement for answers)
             //Do you want to stay in Dunedin with work? (if no, where would you like to go?(country))
