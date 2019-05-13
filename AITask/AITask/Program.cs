@@ -224,7 +224,7 @@ namespace AITask
                     }
                     else
                     {
-                        Console.WriteLine("I dont think that quite answers my question...");
+                        Console.WriteLine("I dont think that quite answers my question, answer the question with (older/younger).");
                         Console.ReadLine();
                         Console.Clear();
                     }
@@ -236,7 +236,7 @@ namespace AITask
 
                     if ((siborder == "youngest") || (siborder == "Youngest"))
                     {
-                        Console.WriteLine("Hope they wernt to harsh on you, you most likely annoyed the hell outof them anyway!");
+                        Console.WriteLine("Hope they wernt to harsh on you, you most likely annoyed the hell out of them anyway!");
                         Console.ReadLine();
                         Console.Clear();
                     }
@@ -255,7 +255,7 @@ namespace AITask
                     }
                     else
                     {
-                        Console.WriteLine("I dont think that quite answers my question, make sure you ar enetering a number");
+                        Console.WriteLine("I dont think that quite answers my question, make sure you ar enetering (oldest/middle/youngest) as your answers.");
                         Console.ReadLine();
                         Console.Clear();
                     }
@@ -279,13 +279,13 @@ namespace AITask
                 string wherework = Console.ReadLine();
                 Console.Clear();
 
-                Console.WriteLine("I hope that you are happy working here, and i hope you can ballance work and your course at the same time.");
+                Console.WriteLine("I hope that you are happy working here, and i hope you can ballance work and your free time.");
                 Console.ReadLine();
                 Console.Clear();
             }
             else if ((job == "no") || (job == "No"))
             {
-                Console.WriteLine("I hope that you have another way to pay for your course.");
+                Console.WriteLine("I hope that you have something elce to fill your days with.");
                 Console.ReadLine();
                 Console.Clear();
             }
