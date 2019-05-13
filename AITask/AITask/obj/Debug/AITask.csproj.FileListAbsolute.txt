@@ -1,0 +1,7 @@
+C:\Users\Harold Mandal\Documents\AI-task\AITask\AITask\bin\Debug\AITask.exe.config
+C:\Users\Harold Mandal\Documents\AI-task\AITask\AITask\bin\Debug\AITask.exe
+C:\Users\Harold Mandal\Documents\AI-task\AITask\AITask\bin\Debug\AITask.pdb
+C:\Users\Harold Mandal\Documents\AI-task\AITask\AITask\obj\Debug\AITask.csprojAssemblyReference.cache
+C:\Users\Harold Mandal\Documents\AI-task\AITask\AITask\obj\Debug\AITask.csproj.CoreCompileInputs.cache
+C:\Users\Harold Mandal\Documents\AI-task\AITask\AITask\obj\Debug\AITask.exe
+C:\Users\Harold Mandal\Documents\AI-task\AITask\AITask\obj\Debug\AITask.pdb

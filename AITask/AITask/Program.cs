@@ -18,22 +18,24 @@ namespace AITask
         {
             //IT TEACHER INTERVIEWER
             //(heavily) Modified Code from Lab 18 Programming to fit project requirements.
-
             do
             {
-
                 if ((backtoStart == 1) || (backtoStart == 2) || (backtoStart == 3) || (backtoStart == 4))
                 {
-                    Console.WriteLine("You will now return to the main menu.");
+                    Console.WriteLine("Thank you for re-answering some of the questions I've had!");
                     Thread.Sleep(2000);
                 }
                 else
                 {
+
                     Console.WriteLine("Hello, this is a terminal where you'll be talking with our prototype artificial intelligence!\n");
                     Thread.Sleep(2000);
 
 
                     Console.WriteLine("This A.I in particular is programmed to have the personality of an I.T teacher!\n");
+                    Thread.Sleep(2000);
+
+                    Console.WriteLine("It will simply ask some questions about you in order to get to know you!\n");
                     Thread.Sleep(2000);
 
                     Console.Write("Loading...");
@@ -373,22 +375,22 @@ namespace AITask
             Console.WriteLine();
             Console.Clear();
 
-            switch (CRanswer1)
+            switch (CRanswer2)
             {
                 case "1":
-                    Console.WriteLine("oooh good answer! Elise is a great lecturer .. and this response should definitely give us bonus points .. wink wink.");
+                    Console.WriteLine("oooh good answer! Elise is a great lecturer .. and this response should definitely give us bonus points .. wink wink.\n");
                     break;
 
                 case "2":
-                    Console.WriteLine("Nice! Programming was one of my favorite classes in the course when i studied also!");
+                    Console.WriteLine("Nice! Programming was one of my favorite classes in the course when i studied also!\n");
                     break;
 
                 case "3":
-                    Console.WriteLine("oh good choice! Nothing gets me more excited than hearing what the tech news is for the day!");
+                    Console.WriteLine("oh good choice! Nothing gets me more excited than hearing what the tech news is for the day!\n");
                     break;
 
                 case "4":
-                    Console.WriteLine("wow really? you must be a right nerd.. but okay then.");
+                    Console.WriteLine("wow really? you must be a right nerd.. but okay then.\n");
                     break;
             }
 
@@ -458,12 +460,13 @@ namespace AITask
         {
             ////////// HAROLDS DONT TOUCH ///////////
             //variables
-            int prevSleep;
+            int newsleepTime = 0;
 
             if (CRanswer1 == "no")
             {
-                Console.WriteLine("What is preventing you from enjoying it that we could help with?");
-
+                Console.WriteLine("If there is something I could help with that is preventing you from enjoying I.T, please talk to a human lecturer!\n");
+                Console.WriteLine("Press enter to continue.");
+                Console.ReadLine();
             }
             else
             {
@@ -475,12 +478,28 @@ namespace AITask
             }
 
             Console.Write("How many hours of sleep do you get on average? ");
-            sleeptime = Convert.ToInt32(Console.ReadLine());
-            Console.Clear();
-
-            if (sleeptime < 6)
+            if (backtoStart != 3)
+            {
+                sleeptime = Convert.ToInt32(Console.ReadLine());
+                Console.Clear();
+            }
+            else
+            {
+                newsleepTime = Convert.ToInt32(Console.ReadLine());
+                Console.Clear();
+            }
+                      
+            if ((sleeptime < 6) && (backtoStart != 3))
             {
                 Console.WriteLine("I would recommend you get at least six or more hours of sleep, that's the minimum for a decent night's rest.\n");
+            }
+            else if ((sleeptime > 8) && (backtoStart != 3))
+            {
+                Console.WriteLine("Wow, you really must enjoy sleeping!\n");
+            }
+            else if ((backtoStart == 3) && (newsleepTime > sleeptime))
+            {
+                Console.WriteLine("I am glad that you are able to put more sleep into your schedule than before! This will definitely help!\n");
             }
             else
             {
@@ -490,7 +509,7 @@ namespace AITask
             Console.ReadLine();
             Console.Clear();
 
-            Console.Write("Do you have any physical health issues that could affect your learning? (y/n): ");
+            Console.Write("Do you have any physical health issues that could affect your learning? (Y/N): ");
             phyHP = Console.ReadLine();
             Console.Clear();
 
@@ -506,6 +525,7 @@ namespace AITask
                 {
                     Console.WriteLine("In that case, I would recommend going onto the Student Success website where you can get help to alleviate this.\n");
                     Console.WriteLine("https://studentservices.op.ac.nz/home/student-success/");
+                    Console.WriteLine();
                     Console.WriteLine("You are getting the right amount of sleep which helps.\n");
                 }
             }
