@@ -526,8 +526,6 @@ namespace AITask
             //Are you generally quite happy?
             //Do you have any health issues?
             //
-            Console.ReadLine();
-            Console.Clear();
             FuturePlans();
         }
 
@@ -539,7 +537,7 @@ namespace AITask
         static void FuturePlans()
         {
             /////////////// BRYNS DONT TOUCH ////////////////////
-            Console.WriteLine("This is Task 4");
+            Console.WriteLine("I would now like to ask you about your career prospects!");
 
             count = count + 1;
 
