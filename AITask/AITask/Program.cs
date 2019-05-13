@@ -22,8 +22,6 @@ namespace AITask
             do
             {
 
-
-
                 if ((backtoStart == 1) || (backtoStart == 2) || (backtoStart == 3) || (backtoStart == 4))
                 {
                     Console.WriteLine("You will now return to the main menu.");
@@ -41,12 +39,10 @@ namespace AITask
                     Console.Write("Loading...");
                     Thread.Sleep(3000);
                     Console.Clear();
+
+                    //starting method that'll make the user go through the whole sets of questions once
+                    GeneralQuestions();
                 }
-
-                //put methods here v
-                //HealthWellBeing();
-
-                //put methods here ^
 
                 Console.WriteLine($"Thank you for answering some questions {name}! I wish you luck in your future endeavors!\n");
                 Console.Write($"Would you like to change some of your answers on questions in a specific category, {name}? (y/n): ");
