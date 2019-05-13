@@ -16,12 +16,17 @@ namespace AITask
 
         static void Main()
         {
-            //IT TEACHER INTERVIEWER
-            //(heavily) Modified Code from Lab 18 Programming to fit project requirements.
+            /*IT TEACHER INTERVIEWER
+             * We came up with questions for each section as a team, so that each team member that's assigned to a specific section has something to work towards.
+             * https://github.com/BrynGibson/AI-task 
+             * We simply wanted our AI to get to know the user, and we used Discord for real-time communication.
+             * We put each section into separate methods so conflicts wouldn't be a major issue, only had 45 commits overall. (We could test our own sections separately in Main() too)*/
+
             do
             {
                 if ((backtoStart == 1) || (backtoStart == 2) || (backtoStart == 3) || (backtoStart == 4))
                 {
+                    backtoStart = 999;
                     Console.WriteLine("Thank you for re-answering some of the questions I've had!");
                     Thread.Sleep(2000);
                 }
